@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kvalitetsgolfballer fortjener en runde til. Kjøp brukte golfballer hos play again.">
+<title>play again — Gode baller. En ny runde.</title>
+<style>
+:root{--green:#123d2b;--green2:#1c573d;--cream:#f5f4ed;--ink:#14231a;--muted:#68746b;--line:#dce2d8;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+header{position:sticky;top:0;z-index:10;background:rgba(245,244,237,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;letter-spacing:-.07em;font-size:1.55rem}.logo span{color:var(--green2)}
+.navlinks{display:flex;align-items:center;gap:24px;font-size:.92rem}.cart-btn,.btn{border:0;background:var(--green);color:white;border-radius:999px;padding:12px 18px;font-weight:700}.cart-btn:hover,.btn:hover{background:var(--green2)}
+.hero{background:var(--green);color:white;overflow:hidden}.hero-inner{max-width:1180px;margin:auto;padding:78px 24px 82px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:48px}
+.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.72rem;color:#c5d9c8;font-weight:800}.hero h1{font-size:clamp(3.2rem,7vw,6.5rem);line-height:.94;letter-spacing:-.075em;margin:18px 0 22px;max-width:720px}.hero p{font-size:1.1rem;line-height:1.7;color:#e1ebe2;max-width:480px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn-light{background:#f4f4e9;color:var(--green)}.btn-outline{background:transparent;border:1px solid #91ac99;color:white}.hero-art{min-height:360px;border-radius:24px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 55% 45%,#2f7750 0%,#1b5639 34%,#123d2b 70%);display:flex;align-items:center;justify-content:center}
+.golfball{width:min(66%,310px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff 0%,#f7f7ed 36%,#d5dccf 78%,#a7b4a4 100%);box-shadow:24px 34px 55px #061b1190,inset -14px -18px 30px #8b9d8a70;position:relative}
+.golfball:before{content:"";position:absolute;inset:9%;border-radius:50%;background-image:radial-gradient(circle,#aeb9aa 1.6px,transparent 2px);background-size:17px 17px;opacity:.52}
+.golfball:after{content:"play again";position:absolute;top:48%;left:0;right:0;text-align:center;color:#17472f;font-weight:900;letter-spacing:-.06em;font-size:clamp(1.2rem,3vw,2rem);transform:rotate(-14deg)}
+.section{max-width:1180px;margin:auto;padding:72px 24px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}.section h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.06em;margin:8px 0}.sub{color:var(--muted);line-height:1.65}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}.product-art{height:190px;background:linear-gradient(145deg,#e2e9df,#f8f8f2);display:flex;align-items:center;justify-content:center;position:relative}.mini-ball{width:112px;height:112px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff,#e5e9df 72%,#b7c1b4);box-shadow:12px 16px 20px #263e2c30;position:relative}.mini-ball:before{content:"";position:absolute;inset:10%;border-radius:50%;background-image:radial-gradient(circle,#aeb9aa 1.4px,transparent 1.8px);background-size:13px 13px}
+.grade{position:absolute;left:14px;top:14px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:.75rem;font-weight:800}.product-info{padding:20px;display:flex;flex-direction:column;flex:1}.product-info h3{margin:0 0 8px;font-size:1.15rem}.product-info p{color:var(--muted);font-size:.9rem;line-height:1.55;margin:0 0 18px}.price-row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.price{font-size:1.3rem;font-weight:900;letter-spacing:-.04em}.small-btn{background:var(--green);color:white;border:0;border-radius:999px;padding:10px 13px;font-weight:750}
+.benefits{background:#e8ede5}.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.benefit{padding:24px 0}.benefit .icon{font-size:1.8rem}.benefit h3{margin:12px 0 8px}.benefit p{color:var(--muted);line-height:1.65;margin:0}
+.order-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:38px;align-items:start}.order-card{background:white;border:1px solid var(--line);border-radius:20px;padding:24px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}.field label{font-size:.85rem;font-weight:750}.field input,.field textarea,.field select{border:1px solid #cbd5c9;background:#fcfcf8;border-radius:10px;padding:12px;color:var(--ink);width:100%}.field textarea{min-height:90px;resize:vertical}.notice{font-size:.85rem;color:var(--muted);line-height:1.55}.cart-list{margin:14px 0}.cart-line{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.cart-line button{border:0;background:transparent;color:#8c3c31;font-weight:700}.total{display:flex;justify-content:space-between;font-size:1.15rem;font-weight:900;padding-top:16px}
+footer{background:#0c2d20;color:#e6eee7;padding:34px 24px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner p{margin:7px 0;color:#bdcdbf;font-size:.85rem}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:var(--muted);font-size:.8rem}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0c2d20;color:white;padding:12px 18px;border-radius:999px;box-shadow:0 8px 28px #0002;display:none;z-index:30}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr;padding-top:56px}.hero-art{min-height:280px}.products{grid-template-columns:1fr 1fr}.order-wrap{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks .hide-mobile{display:none}}
+@media(max-width:520px){.nav{padding:13px 16px}.navlinks{font-size:.8rem}.cart-btn{padding:10px 13px}.section{padding:52px 16px}.hero-inner{padding:52px 16px}.products{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.benefit-grid{grid-template-columns:1fr;gap:4px}.hero h1{font-size:3.7rem}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="Hovedmeny">
+    <a class="logo" href="#top">play <span>again</span></a>
+    <div class="navlinks"><a class="hide-mobile" href="#golfballer">Golfballer</a><a class="hide-mobile" href="#om">Vår idé</a><a href="#bestill">Bestill</a><button class="cart-btn" onclick="document.querySelector('#bestill').scrollIntoView({behavior:'smooth'})">Handlekurv <span id="cartCount">0</span></button></div>
+  </nav>
+</header>
+<main id="top">
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Brukte golfballer · nye muligheter</div>
+      <h1>Gode baller.<br>En ny runde.</h1>
+      <p>Kvalitetsballer fortjener mer enn én runde. Finn gode golfballer til en bedre pris – et smartere valg for både spillet og banen.</p>
+      <div class="hero-actions"><a class="btn btn-light" href="#golfballer">Finn dine baller ↘</a><a class="btn btn-outline" href="#om">Hvorfor play again?</a></div>
+    </div>
+    <div class="hero-art" role="img" aria-label="Illustrasjon av en golfball med play again-logo"><div class="golfball"></div></div>
+  </div>
+</section>
+<section class="section" id="golfballer">
+  <div class="section-head"><div><div class="eyebrow" style="color:var(--green2)">Utvalgt sortiment</div><h2>En god deal. En ny runde.</h2><p class="sub">Velg kvaliteten som passer spillet ditt. Produktene og prisene under er eksempeldata du kan endre.</p></div><span class="pill">Eksempelbutikk</span></div>
+  <div class="products" id="products"></div>
+</section>
+<section class="benefits" id="om">
+  <div class="section">
+    <div class="eyebrow" style="color:var(--green2)">Spill smartere</div><h2>Samme glede. Mindre svinn.</h2><p class="sub" style="max-width:640px">play again gir golfballer en ny sjanse. Du får et rimeligere alternativ, og baller som fortsatt kan brukes får bli med på flere runder.</p>
+    <div class="benefit-grid">
+      <div class="benefit"><div class="icon">◎</div><h3>Kvalitet du kan velge</h3><p>Vi deler ballene inn i tydelige kvalitetsgrader, så du vet hva du bestiller.</p></div>
+      <div class="benefit"><div class="icon">↗</div><h3>Mer golf for pengene</h3><p>Bruk mindre på baller – og mer på rundene du gleder deg til.</p></div>
+      <div class="benefit"><div class="icon">♻</div><h3>En runde til</h3><p>Et enkelt valg som bidrar til at brukbare golfballer ikke går til spille.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="bestill">
+  <div class="section-head"><div><div class="eyebrow" style="color:var(--green2)">Neste steg</div><h2>Legg inn en bestilling</h2><p class="sub">Dette er en gratis bestillingsdemo. Den sender ikke automatisk inn ordren og tar ikke imot betaling.</p></div></div>
+  <div class="order-wrap">
+    <div class="order-card"><h3>Handlekurven din</h3><div id="cartItems" class="cart-list"><p class="sub">Handlekurven er tom foreløpig.</p></div><div class="total"><span>Sum</span><span id="cartTotal">0 kr</span></div><p class="notice">Frakt er ikke inkludert. Endelig frakt og betalingsmåte avtales manuelt.</p><button class="small-btn" onclick="clearCart()">Tøm handlekurv</button></div>
+    <form class="order-card" id="orderForm">
+      <h3>Kontaktinformasjon</h3>
+      <div class="field"><label for="name">Navn</label><input id="name" name="name" required autocomplete="name" placeholder="Ditt navn"></div>
+      <div class="field"><label for="email">E-post</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="navn@eksempel.no"></div>
+      <div class="field"><label for="address">Leveringsadresse</label><input id="address" name="address" required autocomplete="street-address" placeholder="Gateadresse, postnummer og sted"></div>
+      <div class="field"><label for="message">Kommentar (valgfritt)</label><textarea id="message" name="message" placeholder="Ønsket levering eller spørsmål"></textarea></div>
+      <button class="btn" type="submit">Lag bestillingsutkast</button>
+      <p class="notice">Når du trykker, åpnes e-postprogrammet ditt med et bestillingsutkast. Ingenting sendes før du selv sender e-posten. Legg inn din faktiske kontaktadresse i koden før lansering.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="footer-inner"><div><a class="logo" href="#top" style="color:white">play <span style="color:#a9c7b0">again</span></a><p>Gode baller. En ny runde.</p></div><div><strong>Kontakt</strong><p>Legg inn e-postadresse før publisering</p><p>© <span id="year"></span> play again</p></div><div><strong>Informasjon</strong><p>Eksempelbutikk – ikke klar for ekte salg før kontaktinfo, vilkår, frakt og betaling er satt opp.</p></div></div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const products=[
+ {id:'mix-a',name:'Mix-pakke · Grade A',desc:'Rene baller med svært lite synlig slitasje. Et godt valg for de fleste runder.',price:199,qty:12,grade:'Grade A'},
+ {id:'mix-b',name:'Mix-pakke · Grade B',desc:'Spillbare baller med noe kosmetisk slitasje. Mye golf for pengene.',price:149,qty:12,grade:'Grade B'},
+ {id:'premium',name:'Premium mix · Grade A',desc:'Et utvalg premiummerkede baller i god brukt stand. Merke varierer.',price:249,qty:12,grade:'Premium'}
+];
+let cart={};
+const kr=n=>new Intl.NumberFormat('nb-NO',{style:'currency',currency:'NOK',maximumFractionDigits:0}).format(n);
+function renderProducts(){document.getElementById('products').innerHTML=products.map(p=>`<article class="product"><div class="product-art"><span class="grade">${p.grade}</span><div class="mini-ball"></div></div><div class="product-info"><h3>${p.name}</h3><p>${p.desc}<br><strong>${p.qty} baller per pakke</strong></p><div class="price-row"><span class="price">${kr(p.price)}</span><button class="small-btn" onclick="addToCart('${p.id}')">Legg til +</button></div></div></article>`).join('')}
+function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart();toast('Lagt i handlekurven')}
+function removeFromCart(id){delete cart[id];renderCart()}
+function clearCart(){cart={};renderCart()}
+function renderCart(){let count=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById('cartCount').textContent=count;let ids=Object.keys(cart);document.getElementById('cartItems').innerHTML=ids.length?ids.map(id=>{let p=products.find(x=>x.id===id);return `<div class="cart-line"><div><strong>${p.name}</strong><br><span class="sub">${cart[id]} × ${kr(p.price)}</span></div><div style="text-align:right"><strong>${kr(p.price*cart[id])}</strong><br><button onclick="removeFromCart('${id}')">Fjern</button></div></div>`}).join(''):'<p class="sub">Handlekurven er tom foreløpig.</p>';document.getElementById('cartTotal').textContent=kr(ids.reduce((s,id)=>s+products.find(p=>p.id===id).price*cart[id],0))}
+function toast(s){let e=document.getElementById('toast');e.textContent=s;e.style.display='block';setTimeout(()=>e.style.display='none',1800)}
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();if(!Object.keys(cart).length){toast('Legg minst ett produkt i handlekurven først');return}let f=new FormData(e.target);let lines=Object.keys(cart).map(id=>{let p=products.find(x=>x.id===id);return `${cart[id]} x ${p.name} – ${kr(p.price*p.qty*0 + p.price*cart[id])}`}).join('\n');let total=Object.keys(cart).reduce((s,id)=>s+products.find(p=>p.id===id).price*cart[id],0);let body=`Hei play again!\n\nJeg ønsker å bestille:\n${lines}\nSum varer: ${kr(total)}\n\nNavn: ${f.get('name')}\nE-post: ${f.get('email')}\nLeveringsadresse: ${f.get('address')}\nKommentar: ${f.get('message')||'Ingen'}\n\nVennligst bekreft frakt og betalingsmåte.`;let to='SETT-INN-DIN-EPOST-HER';if(to.includes('SETT-INN')){alert('Før bestilling kan sendes må du legge inn din faktiske e-postadresse i index.html. Bestillingsutkastet vises nå.')}window.location.href=`mailto:${to}?subject=${encodeURIComponent('Bestilling fra play again')}&body=${encodeURIComponent(body)}`});
+document.getElementById('year').textContent=new Date().getFullYear();renderProducts();renderCart();
+</script>
+</body>
+</html>
